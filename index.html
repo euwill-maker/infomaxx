@@ -123,6 +123,35 @@ a { text-decoration: none; color: inherit; }
   padding: 6px 14px; border-radius: 50px;
 }
 
+/* ── CIDADES STRIP ─────────────────── */
+.cidades-strip {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 12px 28px; overflow: hidden;
+}
+.cidades-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: nowrap; overflow-x: auto;
+}
+.cidades-inner::-webkit-scrollbar { display: none; }
+.cidades-label {
+  color: var(--green); font-size: 11px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; flex-shrink: 0;
+}
+.cidades-sep {
+  color: rgba(255,255,255,0.25); font-size: 13px; flex-shrink: 0;
+}
+.cidade-tag {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 600;
+  padding: 4px 12px; border-radius: 50px; white-space: nowrap; flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.cidade-tag:hover { background: rgba(184,212,0,0.12); color: var(--green); border-color: rgba(184,212,0,0.3); }
+
 /* ── BENEFITS ──────────────────────── */
 .benefits { background: white; padding: 80px 0; text-align: center; }
 .benefits-grid {
@@ -568,21 +597,19 @@ a { text-decoration: none; color: inherit; }
 </section>
 
 <!-- ── CIDADES ──────────────────────── -->
-<div style="background:var(--navy); padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.07);">
-  <div class="streaming-inner" style="max-width:var(--maxw); margin:0 auto; padding:0 28px;">
-    <span class="streaming-label">Atendemos em</span>
-    <div class="streaming-divider"></div>
-    <div class="streaming-apps">
-      <span class="streaming-app">Capitão/RS</span>
-      <span class="streaming-app">Lajeado</span>
-      <span class="streaming-app">Estrela</span>
-      <span class="streaming-app">Encantado</span>
-      <span class="streaming-app">Arroio do Meio</span>
-      <span class="streaming-app">Marques de Souza</span>
-      <span class="streaming-app">Pouso Novo</span>
-      <span class="streaming-app">Travesseiro</span>
-      <span class="streaming-app">Nova Bréscia</span>
-    </div>
+<div class="cidades-strip">
+  <div class="cidades-inner">
+    <span class="cidades-label">Atendemos em</span>
+    <span class="cidades-sep">→</span>
+    <span class="cidade-tag">Capitão/RS</span>
+    <span class="cidade-tag">Lajeado</span>
+    <span class="cidade-tag">Estrela</span>
+    <span class="cidade-tag">Encantado</span>
+    <span class="cidade-tag">Arroio do Meio</span>
+    <span class="cidade-tag">Marques de Souza</span>
+    <span class="cidade-tag">Pouso Novo</span>
+    <span class="cidade-tag">Travesseiro</span>
+    <span class="cidade-tag">Nova Bréscia</span>
   </div>
 </div>
 
